@@ -1,0 +1,7 @@
+4
+0
+#ffffff
+./BgFile/image/backgroundDEFAULT.png
+./BgFile/video/default1.webm
+https://www.dmoe.cc/random.php
+./BgFile/image/backgroundDEFAULT.png

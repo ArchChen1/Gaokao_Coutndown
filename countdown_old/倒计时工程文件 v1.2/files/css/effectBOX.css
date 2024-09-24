@@ -1,0 +1,176 @@
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    /* 将 z-index 设置为较大的值 */
+}
+
+.line1 {
+    line-height: 110rem;
+    z-index: 50000;
+    left: 17%;
+    top: 26%;
+    position: absolute;
+}
+
+.line2 {
+    line-height: 50rem;
+    z-index: 50000;
+    left: 17%;
+    top: 33%;
+    position: absolute;
+}
+
+.line3 {
+    line-height: 110rem;
+    z-index: 50000;
+    left: 17%;
+    top: 40%;
+    position: absolute;
+}
+
+.line4 {
+    line-height: 180rem;
+    z-index: 50000;
+    left: 17%;
+    top: 53%;
+    position: absolute;
+}
+
+.copyright {
+    display: block;
+    text-align: right;
+    color: white;
+    border: 15px solid rgba(0, 0, 0, 0);
+    border-style: none none none solid;
+    font-weight: 1;
+    font-size: 15rem;
+    font-family: 楷体;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.copyright_box {
+
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+    z-index: 50000;
+}
+
+/* 
+.nowBOX {
+    position: absolute;
+    left: 17%;
+    top: 30%;
+    z-index: 50000;
+}
+
+.gaokaoBOX {
+    position: absolute;
+    left: 17%;
+    top: 40%;
+    z-index: 50000;
+} */
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.underbackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -10;
+}
+
+.weatherBOX {
+    position: absolute;
+    left: 25%;
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    zoom: 97%;
+    z-index: 50000;
+}
+
+.kechengbiaoBOX {
+    position: absolute;
+    /*top: 50%;
+    left:85%;
+    transform: translate(0,-50%);*/
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 1000px;
+    padding: 10px 0px 0px 0px;
+}
+
+.separator {
+    position: relative;
+    text-align: center;
+}
+
+.separator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 105%;
+    border-top: 5rem solid #ffffff;
+}
+
+.textBOX {
+    min-width: 700rem;
+    max-width: 1000rem;
+    font-size: 40rem;
+    font-family: 微软雅黑;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 1px #ffffff;
+    text-align: center;
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+    z-index: 50000;
+}
+
+.textBOXbackgroud {
+    font-size: 40rem;
+    font-family: 微软雅黑;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 500rem;
+    padding: 20rem 40rem 20rem 40rem;
+    max-height: 200rem;
+    max-width: 1000rem;
+}
+
+.gap2 {
+    font-size: 1rem;
+}
+
+#textline1 {
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+#textline2 {
+    text-align: center;
+}

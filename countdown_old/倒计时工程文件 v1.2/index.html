@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>高考倒计时</title>
+	<script src="./files/js/jquery-3.6.0.min.js"></script><!--jquery-->
+	<script src="./files/js/TextSetting.js"></script><!--自定义文字-->
+	<script src="./files/js/boxsetting.js"></script><!--自定义文字-->
+	<script src="./files/js/Timer.js"></script><!--刷新定时器-->
+	<script src="./files/js/countdown.js"></script><!--倒数-->
+	<script src="./files/js/WaitLoad.js"></script><!--等待加载-->
+	<script src="./files/js/TextBox.js"></script><!--自定义文本-->
+	<script src="./files/js/Schedule.js"></script><!--课程表-->
+	<script src="./files/js/background.js"></script><!--自定义背景设置-->
+	<script src="./files/js/autoSIZE.js"></script><!--实现背景/元素大小/字号/等的自动调整-->
+	<link rel="stylesheet" href="./files/css/effectBOX.css"><!--背景图片-->
+	<link rel="stylesheet" href="./files/css/effectTEXT.css"><!--背景图片-->
+	<link rel="stylesheet" href="./files/css/load.css"><!--等待加载动画-->
+	<script src="./files/js/autoRELOAD.js"></script><!-- 自动刷新 -->
+</head>
+
+<body><!--隐藏滚轮-->
+	<header><!-- 壁纸设置 -->
+		<img id="Under" class="underbackground"><!--图片壁纸-->
+		<img id="backgroundIMG" class="background" onerror="checkError()" onload=""><!--图片壁纸-->
+		<video id="backgroundVIDEO" class="background" autoplay loop>
+			<source type="video/webm">
+		</video><!--背景视频-->
+		<video id="backgroundVIDEOhidden" class="background" muted="muted" style="opacity: 0;">
+			<source type="video/webm">
+		</video><!--背景视频-->
+	</header>
+	<canvas id="canvas"></canvas>
+	<script src="./files/js/Star.js"></script><!--满天星-->
+	<!-- 等待加载盒子 -->
+	<div class="loaderbg">
+		<div class="spinner">
+			<div class="double rect1"></div>
+			<div class="double rect2"></div>
+			<div class="double rect3"></div>
+			<div class="double rect4"></div>
+			<div class="double rect5"></div>
+			<div class="loading">Loading...</div>
+		</div>
+	</div>
+	<!--end-->
+	<!--现在时间盒子-->
+	<div id="nowBOX" class="nowBOX">
+		<div class="line1">
+			<a href="javascript:location.reload()">
+				<span class="xianzaishiWENZI" id="xianzaishiWENZI">现在是</span>
+			</a>
+		</div>
+		<div class="line2">
+			<span class="nowYear Now_number">1</span>
+			<span class="line2text">年</span>
+			<span class="nowMonth Now_number"></span>
+			<span class="line2text">月</span>
+			<span class="nowDay Now_number"></span>
+			<span class="line2text">日</span>
+			<span class="placeholder">8888888</span>
+			<span class="nowHour time"></span>
+			<span class="line2text">:</span>
+			<span class="nowMinute time"></span>
+			<span class="line2text">:</span>
+			<span class="nowSecond time"></span>
+		</div>
+	</div>
+	<!--倒数盒子-->
+	<div class="gaokaoBOX">
+		<div class="line3">
+			<span class="line3text">距离</span>
+			<span class="placeholder">00</span>
+			<span class="daojishiNIAN line3num"></span>
+			<span class="placeholder">00</span>
+			<span class="line3text">年</span>
+			<span class="gaokao">高考</span>
+			<span class="placeholder">00</span>
+			<span class="line3text">还有</span>
+		</div>
+		<div class="line4">
+			<span class="leftDay Line4num"></span>
+			<span class="Line4text">天</span>
+			<span class="leftHour Line4num"></span>
+			<span class="Line4text">小时</span>
+			<span class="leftMinute Line4num_lite"></span>
+			<span class="Line4text_lite">min</span>
+			<span class="leftSecond Line4num_lite"></span>
+			<span class="Line4text_lite">s</span>
+		</div>
+	</div>
+	<!--倒数盒子结束-->
+	<div id="weatherBOX" class="weatherBOX"><!--天气插件盒-->
+		<div id="he-plugin-standard"></div><!--和风天气插件-->
+		<script>
+			WIDGET = {
+				"CONFIG": {
+					"layout": "1",
+					"width": "500",
+					"height": "200",
+					"background": "5",
+					"dataColor": "FFFFFF",
+					"language": "zh",
+					"borderRadius": "10",
+					"city": "CN101230306",
+					"key": "f9cfb060ea484f158db86ecc6eb50018"
+				}
+			}
+		</script>
+		<script src="./files/js/weather/he-standard-common.js"></script>
+		<!-- <script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script> -->
+		<!--和风天气插件结束-->
+	</div><!--天气盒子结束-->
+
+	<div id="kechengbiaoBOX" class="kechengbiaoBOX"><!--课程表盒子-->
+		<span id="morningschedule" class="moringschedule"></span><br />
+		<span id="gap"><br /></span><!--修改前面的br字号改变课程表上下午间距-->
+		<span id="afternoonschedule" class="afternoonschedule"></span>
+	</div>
+
+	<div class="textBOX">
+		<div class="separator"></div>
+		<div class="textBOXbackgroud">
+			<div id="textline1"></div>
+			<div id="textline2"></div>
+		</div>
+		<div class="separator"></div>
+	</div>
+	<div id="copyright_box" class="copyright_box">
+		<span id="copyright2" class="copyright"></span>
+		<span id="copyright" class="copyright"></span>
+	</div>
+	<iframe src="http://127.0.0.1:30518" id="webreload" name="webreload" style="opacity: 0;"></iframe>
+
+</body>
+
+</html>
