@@ -134,7 +134,7 @@ QChr.prototype.jumping = function () {
 
     move();
 };
-// 启动自动移动函数
+// 启动自动随机移动函数
 QChr.prototype.startAutoMove = function () {
     let self = this;
     // 设置一个随机的延迟时间

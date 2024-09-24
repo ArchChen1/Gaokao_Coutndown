@@ -1,0 +1,28 @@
+#ScheduleGap {
+    font-size: 100 rem;
+}
+
+#ScheduleBox {
+    position: absolute;
+    padding: 10px 10px 10px 10px;
+    left: 10%;
+    top: 20%;
+    background-color: rgba(255, 7, 222, 0.373);
+    opacity: 100%;
+    text-align: center;
+    z-index: 0;
+}
+/*以下是字体设置*/
+#morningSchedule {
+    color: aqua;
+    /*字体粗细  字体粗细  字体大小/行高  字体family*/  
+    font: normal 400 30px/40px "华文行楷";
+    text-shadow: 1px 1px 0.5rem black;
+}
+
+#afternoonSchedule {
+    color: aqua;
+    /*字体粗细  字体粗细  字体大小/行高  字体family*/  
+    font: normal 400 30px/40px "华文行楷";
+    text-shadow: 1px 1px 0.5rem black;
+}
