@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icon.bmp</file>
+        <file>oppp64.png</file>
+        <file>eat64.png</file>
+        <file>done64.png</file>
+        <file>icon.ico</file>
+    </qresource>
+    <qresource prefix="/bg">
+        <file>OIP.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix2"/>
+    <qresource prefix="/new/prefix1"/>
+</RCC>

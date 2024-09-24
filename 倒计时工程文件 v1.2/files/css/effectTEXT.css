@@ -1,0 +1,119 @@
+.hide {
+    opacity: 0;
+}
+
+/* line1 */
+.xianzaishiWENZI {
+    font-family: "华文行楷";
+    font-size: 45rem;
+    font-weight: 200;
+    text-shadow: 1px 1px 10px #000000;
+    color: rgb(255, 153, 204);
+}
+
+/* line2 */
+
+.line2text {
+    font-family: "华文行楷";
+    font-size: 30rem;
+    font-weight: 200;
+    text-shadow: 1px 1px 6px #000000;
+    color: rgb(255, 153, 204);
+}
+
+.Now_number {
+    font-family: "华文行楷";
+    font-size: 50rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 10px #000000;
+    color: rgb(255, 255, 255);
+}
+
+.time {
+    font-family: "MS Gothic";
+    font-size: 50rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 10px #000000;
+    color: rgb(255, 255, 255);
+}
+
+/* line3 */
+
+.line3text {
+    font-family: "华文行楷";
+    font-size: 89rem;
+    font-weight: 200;
+    text-shadow: 1px 1px 7px #000000;
+    color: rgb(255, 153, 204);
+}
+
+.line3num {
+    font-family: "MV Boli";
+    font-size: 100rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 8px #000000;
+    color: rgb(255, 255, 255);
+}
+
+.gaokao {
+    font-family: "华文行楷";
+    font-size: 100rem;
+    font-weight: 200;
+    text-shadow: 1px 1px 8px #000000;
+    color: rgb(255, 255, 255);
+}
+
+/* line4 */
+
+
+.Line4text {
+    font-family: "等线";
+    font-size: 120rem;
+    font-weight: 1000;
+    text-shadow: 1px 1px 10px #000000;
+    color: rgb(255, 153, 204);
+}
+
+.Line4num {
+    font-family: "MV Boli";
+    font-size: 225rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 10px #000000;
+    color: rgb(255, 255, 255);
+}
+
+.Line4text_lite {
+    font-family: "等线";
+    font-size: 30rem;
+    font-weight: 1000;
+    text-shadow: 1px 1px 10px #000000;
+    color: rgb(255, 153, 204);
+}
+
+.Line4num_lite {
+    font-family: "MS Gothic";
+    font-size: 50rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 10px #000000;
+    color: rgb(255, 255, 255);
+}
+
+/*////*/
+
+.moringschedule {
+    font-size: 70rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 7px #000000;
+}
+
+.afternoonschedule {
+    font-size: 70rem;
+    color: rgb(255, 153, 204);
+    text-shadow: 1px 1px 7px #000000;
+}
+
+.placeholder {
+    opacity: 0;
+    font-size: 10rem;
+    line-height: 10rem;
+}
