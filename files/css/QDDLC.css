@@ -1,0 +1,76 @@
+html, body {
+    overflow: hidden;
+    height: 100%; /* 让页面完全填满屏幕高度 */
+}
+
+#box {
+    position: absolute;
+    top: 70%;
+    width: 960px;
+    height: 173px;
+    background-color: lime;
+}
+#Monika, #Natsuki, #Yuri, #Sayori,#Anon,#Yanami,#Rana,#Soyo,#Tomori {
+    position: absolute;
+    bottom: 0; /* 将每个div的底部对齐到父元素的底部 */
+    cursor: pointer;
+}
+
+#Monika {
+    width: 119px;
+    height: 168px;
+    background-image: url(../images/Monika_sticker_1.png);
+}
+
+#Natsuki {
+    width: 141px;
+    height: 159px;
+    background-image: url(../images/Natsuki_sticker_1.png);
+}
+
+#Yuri {
+    width: 112px;
+    height: 161px;
+    background-image: url(../images/Yuri_sticker_1.png);
+}
+
+#Sayori {
+    width: 122px;
+    height: 173px;
+    background-image: url(../images/Sayori_sticker_1.png);
+}
+
+#Yanami {
+    width: 640px;
+    height: 1150px;
+    background-image: url(../images/Yanami_sticker_1.png);
+    transform: scale(0.2); 
+}
+
+#Rana {
+    width: 248px;
+    height: 322px;
+    background-image: url(../images/Rana_sticker_1.png);
+    transform: scale(0.6); 
+}
+
+#Anon {
+    width: 235px;
+    height: 353px;
+    background-image: url(../images/Anon_sticker_1.png);
+    transform: scale(0.6); 
+}
+
+#Tomori {
+    width: 189px;
+    height: 322px;
+    background-image: url(../images/Tomori_sticker_1.png);
+    transform: scale(0.6); 
+}
+
+#Soyo {
+    width: 250px;
+    height: 333px;
+    background-image: url(../images/Soyo_sticker_1.png);
+    transform: scale(0.6); 
+}
