@@ -11,12 +11,30 @@ body {
 
 }
 
-#myVideo {
-    position: fixed; /* 保持固定定位 */
-    top: 0;          /* 设置顶部距离为 0 */
-    left: 0;         /* 设置左侧距离为 0 */
-    min-width: 100%; /* 确保宽度至少为 100% */
-    min-height: 100%; /* 确保高度至少为 100% */
-    opacity: 0;
+#bgVideo {
+    position: fixed;     
+    top: 0;               
+    left: 0;              
+    width: 100vw;         
+    height: 100vh;        
+    object-fit: cover;    
+    z-index: -1;          
+    opacity: 0;          
 }
+
   
+#copyright {
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+    z-index: 50000;
+    display: block;
+    text-align: right;
+    color: white;
+    border: 15px solid rgba(0, 0, 0, 0);
+    border-style: none none none solid;
+    font-weight: 1;
+    font-size: 1rem;
+    font-family: 楷体;
+    background-color: rgba(0, 0, 0, 0.3);
+}

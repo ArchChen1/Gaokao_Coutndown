@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
-	<meta charset="utf-8">
-	<title>背景测试</title>
-	<link rel="stylesheet" href="./files/css/Background.css">
+    <meta charset="utf-8">
+    <title>背景测试</title>
+    <link rel="stylesheet" href="./files/css/Background.css">
     <script src="./files/js/jquery-3.6.0.min.js"></script><!--jquery-->
-	<script src="./files/js/Background.js"></script><!--Q版立绘-->
+    <script src="./files/js/Background.js"></script>
 </head>
 
-
 <body>
-	<video autoplay muted loop id="myVideo">
-        <source src="./files/BgFile/video/default1.webm" type="video/mp4">
+    <video autoplay muted loop id="bgVideo">
+        <source id="videoSource" src="" type="video/mp4">
     </video>
+    <button id="playButton">播放</button>
+    <button id="pauseButton">暂停</button>
+
+    <script>
+        const video = document.getElementById('bgVideo');
+        const playButton = document.getElementById('playButton');
+        const pauseButton = document.getElementById('pauseButton');
+
+        // 页面加载完成后自动播放视频
+        $(document).ready(function () {
+            loadBG(); // 等待网页ready再执行
+        });
+
+        playButton.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+            }
+        });
+
+        pauseButton.addEventListener('click', () => {
+            if (!video.paused) {
+                video.pause();
+            }
+        });
+    </script>
+    <div id="copyright"></div>
 </body>
 
 </html>
