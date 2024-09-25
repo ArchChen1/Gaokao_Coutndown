@@ -1,5 +1,5 @@
 body {
-    background:url(../../BgFile/image/backgroundDEFAULT.png);
+    background:url(../BgFile/image/backgroundDEFAULT.png);
     /* 背景图垂直、水平均居中 */
     background-position: left top;
     /* 背景图不平铺 */
