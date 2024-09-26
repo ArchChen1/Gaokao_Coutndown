@@ -1,6 +1,8 @@
 function QChr(name, x) {
     this.ctrl = document.getElementById(name);
-    
+    if(window[name + 'IsHide']) {
+        this.ctrl.style.opacity = 0; // !!!!!记得改成删除
+    }
     this.autoMove = 1; // 初始化自动移动为1
     this.isMoving = 0; // 初始化是否正在移动
     this.isDragging = 0;
@@ -22,7 +24,6 @@ function QChr(name, x) {
 
     this.chrHeight = this.ctrl.offsetHeight * this.scale;
     this.defaultDis = document.getElementById('box').offsetHeight - this.chrHeight; //角色上端距离距离盒子高度
-    console.log(name,this.chrHeight,this.scale,this.defaultDis)// ****debug****
     
     this.name = name;
     this.x = x;
@@ -47,11 +48,11 @@ QChr.prototype.randomMove = function () {
     if(this.autoMove == 0) return;
     if(this.isMoving == 1) return;
     this.isMoving = 1;
-    let xSpeed = 1;
-    let maxSpeed = 1;
-    let ySpeed = 5;
-    let acceleration = 0.5;
-    let self = this;
+    var xSpeed = 1;
+    var maxSpeed = 1;
+    var ySpeed = 5;
+    var acceleration = 0.5;
+    var self = this;
 
 
     this.forward = Math.random() < 0.5 ? -1 : 1;
@@ -106,9 +107,9 @@ QChr.prototype.jumping = function () {
     if(this.isMoving == 1) return; // 如果角色正在移动，直接返回，避免重复跳跃
     this.ctrl.style.backgroundImage=this.bgurl2;
     this.isMoving = 1; // 标志位，表示角色正在跳跃
-    let ySpeed = 7; // 初始的Y轴速度
-    let acceleration = 0.4; // 加速度
-    let self = this;
+    var ySpeed = 7; // 初始的Y轴速度
+    var acceleration = 0.4; // 加速度
+    var self = this;
 
     function move() {
         if (self.isDragging == 1) return;
@@ -137,14 +138,14 @@ QChr.prototype.jumping = function () {
 };
 // 启动自动随机移动函数
 QChr.prototype.startAutoMove = function () {
-    let self = this;
+    var self = this;
     // 设置一个随机的延迟时间
-    let delay = Math.random() * 1000; // 随机延迟0到1000毫秒
+    var delay = Math.random() * 1000; // 随机延迟0到1000毫秒
     setTimeout(function () {
         // 定时器开始后，角色开始自动移动
         self.autoMoveInterval = setInterval(function () {
             if (self.autoMove) {
-                let isJump = Math.random() < 0.5 ? -1 : 1;// 二分之一概率发生移动
+                var isJump = Math.random() < 0.5 ? -1 : 1;// 二分之一概率发生移动
                 if(isJump == 1)
                 self.randomMove();
             }
@@ -168,7 +169,7 @@ QChr.prototype.onmouseover = function () {
             }
         }, 100); 
     // 添加鼠标按下事件，传入事件参数e
-    let startX, startY, startMouseX, startMouseY;
+    var startX, startY, startMouseX, startMouseY;
     
     // 移除监听器
     this.ctrl.removeEventListener('mousedown', this.mouseDownHandler);
@@ -264,13 +265,23 @@ QChr.prototype.onmouseout = function () {
 
 $(document).ready(function () {
     // 页面加载完成开始初始化角色
-    let Sayori = new QChr('Sayori', 60);
-    let Natsuki = new QChr('Natsuki', 250);
-    let Yuri = new QChr('Yuri', 460);
-    let Monika = new QChr('Monika', 650);
-    let Anon = new QChr('Anon', 60);
-    let Yanami = new QChr('Yanami', 120);
-    let Rana = new QChr('Rana', 180);
-    let Tomori = new QChr('Tomori', 320);
-    let Soyo = new QChr('Soyo', 420);
+    var Sayori = new QChr('Sayori', 60);
+    var Natsuki = new QChr('Natsuki', 250);
+    var Yuri = new QChr('Yuri', 460);
+    var Monika = new QChr('Monika', 650);
+    var Anon = new QChr('Anon', 60);
+    var Yanami = new QChr('Yanami', 120);
+    var Rana = new QChr('Rana', 180);
+    var Tomori = new QChr('Tomori', 320);
+    var Soyo = new QChr('Soyo', 420);
 });
+
+var SayoriIsHide = false;
+var NatsukiIsHide = true;
+var YuriIsHide = true;
+var MonikaIsHide = true;
+var AnonIsHide = true;
+var YanamiIsHide = true;
+var RanaIsHide = true;
+var TomoriIsHide = true;
+var SoyoIsHide = true;
