@@ -261,6 +261,8 @@ QChr.prototype.onmouseout = function () {
 };
 
 
+$(document).ready(function () {
+    
 // 初始化角色
 let Sayori = new QChr('Sayori', 60);
 let Natsuki = new QChr('Natsuki', 250);
@@ -280,3 +282,4 @@ Yanami.startAutoMove();
 Rana.startAutoMove();
 Tomori.startAutoMove();
 Soyo.startAutoMove();
+});
