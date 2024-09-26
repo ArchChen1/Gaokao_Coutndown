@@ -40,7 +40,7 @@ function QChr(name, x) {
     this.images[0].src = './files/images/' + name + '_sticker_1.png';
     this.images[1] = new Image();
     this.images[1].src = './files/images/' + name + '_sticker_2.png';
-    this.startAutoMove();
+    this.startAutoMove(); // 开始自动随机移动
 }
 // 随机移动函数
 QChr.prototype.randomMove = function () {
@@ -263,16 +263,14 @@ QChr.prototype.onmouseout = function () {
 
 
 $(document).ready(function () {
-    
-// 初始化角色
-let Sayori = new QChr('Sayori', 60);
-let Natsuki = new QChr('Natsuki', 250);
-let Yuri = new QChr('Yuri', 460);
-let Monika = new QChr('Monika', 650);
-let Anon = new QChr('Anon', 60);
-let Yanami = new QChr('Yanami', 120);
-let Rana = new QChr('Rana', 180);
-let Tomori = new QChr('Tomori', 320);
-let Soyo = new QChr('Soyo', 420);
-
+    // 页面加载完成开始初始化角色
+    let Sayori = new QChr('Sayori', 60);
+    let Natsuki = new QChr('Natsuki', 250);
+    let Yuri = new QChr('Yuri', 460);
+    let Monika = new QChr('Monika', 650);
+    let Anon = new QChr('Anon', 60);
+    let Yanami = new QChr('Yanami', 120);
+    let Rana = new QChr('Rana', 180);
+    let Tomori = new QChr('Tomori', 320);
+    let Soyo = new QChr('Soyo', 420);
 });
