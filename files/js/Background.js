@@ -10,9 +10,12 @@ function loadBG(){
         const videoSource = document.getElementById('videoSource');
         videoSource.src = videoUrl;
         const bgVideo = document.getElementById('bgVideo');
-        bgVideo.muted = isVideoMute;
         bgVideo.load();
-        bgVideo.play();
+        bgVideo.muted = false;
+        if(!bgVideo.muted)
+        $(document).one('click', function() {// 大部分浏览器不支持有声视频的播放
+            bgVideo.play();// 无奈这里添加个click交互进行播放
+        });
     } else if (bgType === 2) {
         applyAPI(ACGurl);
     } else if (bgType === 3) {
