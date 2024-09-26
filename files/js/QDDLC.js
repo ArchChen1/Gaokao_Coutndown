@@ -40,6 +40,7 @@ function QChr(name, x) {
     this.images[0].src = './files/images/' + name + '_sticker_1.png';
     this.images[1] = new Image();
     this.images[1].src = './files/images/' + name + '_sticker_2.png';
+    this.startAutoMove();
 }
 // 随机移动函数
 QChr.prototype.randomMove = function () {
@@ -273,13 +274,5 @@ let Yanami = new QChr('Yanami', 120);
 let Rana = new QChr('Rana', 180);
 let Tomori = new QChr('Tomori', 320);
 let Soyo = new QChr('Soyo', 420);
-Natsuki.startAutoMove();
-Sayori.startAutoMove();
-Yuri.startAutoMove();
-Monika.startAutoMove();
-Anon.startAutoMove();
-Yanami.startAutoMove();
-Rana.startAutoMove();
-Tomori.startAutoMove();
-Soyo.startAutoMove();
+
 });
