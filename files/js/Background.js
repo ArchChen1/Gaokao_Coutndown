@@ -11,8 +11,7 @@ function loadBG(){
         videoSource.src = videoUrl;
         const bgVideo = document.getElementById('bgVideo');
         bgVideo.load();
-        bgVideo.muted = false;
-        if(!bgVideo.muted)
+        bgVideo.muted = isVideoMute;
         $(document).one('click', function() {// 大部分浏览器不支持有声视频的播放
             bgVideo.play();// 无奈这里添加个click交互进行播放
         });
@@ -139,7 +138,7 @@ function applyAPI(API) {
 
 
 let bgType = 1; // 默认背景类型
-let isVideoMute = false;
+let isVideoMute = true;
 let ACGurl = "https://api.maho.cc/random-img/pc.php"; // ACG 图片 API
 let customUrl = "https://www.dmoe.cc/random.php"; // 自定义 API
 let imageUrl = "./files/BgFile/image/2.png"; // 图片背景

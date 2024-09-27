@@ -6,7 +6,7 @@ function Day(name){
 }
 
 $(document).ready(function () {
-    schedule(); // 先执行一次
+    schedule(); // 完成页面加载完执行
 });
 
 function schedule(){
