@@ -1,7 +1,7 @@
 function QChr(name, x) {
     this.ctrl = document.getElementById(name);
     if(window[name + 'IsHide']) {
-        this.ctrl.style.opacity = 0; // !!!!!记得改成删除
+        this.ctrl.remove(); 
     }
     this.autoMove = 1; // 初始化自动移动为1
     this.isMoving = 0; // 初始化是否正在移动
